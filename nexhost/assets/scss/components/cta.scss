@@ -1,0 +1,113 @@
+/* ///////////////////////////////////////////////////////////
+02. cta CSS
+/////////////////////////////////////////////////////////// */ 
+@use '../abstracts/variables' as *;
+
+
+/* ///////////////////////////////////////////////////////////
+Header CSS o1 Start
+/////////////////////////////////////////////////////////// */  
+ 
+.nh_cta {
+    &-area {
+        margin-bottom: -125px;
+        position: relative;
+        z-index: 1;
+    }
+    &-wrap {
+        background: var(--clr-theme-primary);
+        border-radius: 10px;
+        padding: 60px 80px 70px;
+        display: flex;
+        align-items: center;
+        gap: 20px;
+        row-gap: 30px;
+        @media #{$lg}{
+            padding: 60px 50px 70px;
+        }
+        @media #{$md}{
+            padding: 50px 50px 60px;
+            flex-wrap: wrap;
+        }
+        @media #{$sm}{
+            padding: 50px 40px 60px;
+        }
+        @media #{$xs}{
+            padding: 40px 30px 50px;
+        }
+    }
+    &-title {
+        width: 500px;
+        @media #{$lg}{
+            width: 340px;
+        }
+        @media #{$md}{
+            width: 100%;
+        }
+        h2 {
+            color: rgb(255, 255, 255);
+            font-size: 48px;
+            font-weight: 700;
+            line-height: 1.2;
+            letter-spacing: -1px;
+            margin-bottom: 0;
+            @media #{$lg}{
+                font-size: 44px;
+            }
+            @media #{$md}{
+                font-size: 42px;
+            }
+            @media #{$xs}{
+                font-size: 40px;
+            }
+            @media #{$xxs}{
+                font-size: 34px;
+            }
+        }
+    }
+    &-form {
+        width: calc(100% - 520px);
+        @media #{$lg}{
+            width: calc(100% - 360px);
+        }
+        @media #{$md}{
+            width: 100%;
+        }
+        form {
+            display: flex;
+            align-items: center;
+            gap: 20px;
+            @media #{$xxs}{
+                flex-wrap: wrap;
+            }
+            input {
+                height: 60px;
+                border-radius: 10px;
+                border: none;
+                padding: 0 20px;
+                color: rgb(133, 133, 133);
+                font-size: 16px;
+                font-weight: 600;
+                line-height: 20px;
+                color: rgb(133, 133, 133, 0.5);
+                width: 100%;
+            }
+            button {
+                background: var(--clr-common-black);
+                border: none;
+                border-radius: 10px;
+                height: 60px;
+                padding: 0 40px;
+                color: rgb(255, 255, 255);
+                font-size: 16px;
+                font-weight: 600;
+                line-height: 20px;
+                text-transform: capitalize;
+                flex-shrink: 0;
+                @media #{$xxs}{
+                    width: 100%;
+                }
+            }
+        }
+    }
+}

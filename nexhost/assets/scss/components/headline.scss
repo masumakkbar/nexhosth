@@ -1,0 +1,165 @@
+/* ///////////////////////////////////////////////////////////
+02. video CSS
+/////////////////////////////////////////////////////////// */ 
+@use '../abstracts/variables' as *;
+
+
+/* ///////////////////////////////////////////////////////////
+Header CSS 03 Start
+/////////////////////////////////////////////////////////// */  
+
+.h3_nh_headline {
+    &-area {
+        background-color: var(--clr-common-black);
+        padding-top: 38px;
+        padding-bottom: 38px;
+        @media #{$md}{
+            padding-top: 25px;
+            padding-bottom: 25px;
+        }
+    }
+    &-title {
+        display: flex;
+        align-items: center;
+        gap: 25px;
+        margin-bottom: 0;
+        text-align: center;
+        margin-right: 25px;
+        width: max-content !important;
+        
+        .title {
+            @include transition (.3s);
+            cursor: pointer;
+            display: block;
+            color: rgb(255, 255, 255);
+            font-size: 45px;
+            font-weight: 700;
+            line-height: 1;
+            letter-spacing: -1px;
+            position: relative;
+            z-index: 1;
+            @media #{$md}{
+                font-size: 40px;
+            }
+            &::before {
+                position: absolute;
+                left: 0;
+                bottom: 0;
+                width: 100%;
+                height: 2px;
+                content: "";
+                background: var(--clr-theme-primary);
+                @include transition (.3s);
+                opacity: 0;
+                visibility: hidden;
+            }
+        }
+        
+        .number {
+            width: 40px;
+            height: 40px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border: 2px solid #fff;
+            background-color: var(--clr-theme-primary);
+            color: rgb(255, 255, 255);
+            font-size: 20px;
+            font-weight: 700;
+            line-height: 1;
+            letter-spacing: -0.6px;
+            border-radius: 50%;
+        }
+        &:hover {
+            .title {
+                color: var(--clr-theme-primary);
+                &::before {
+                    opacity: 1;
+                    visibility: visible;
+                }
+            }
+        }
+    }
+}
+
+/* ///////////////////////////////////////////////////////////
+Header CSS 05 Start
+/////////////////////////////////////////////////////////// */  
+
+.h5_nh_headline {
+    &-area {
+        background-color: var(--clr-common-black);
+        padding-top: 38px;
+        padding-bottom: 38px;
+        border-bottom: 8px solid var(--clr-theme-primary);
+        @media #{$md}{
+            padding-top: 25px;
+            padding-bottom: 25px;
+        }
+    }
+    &-ticker {
+        display: flex;
+        gap: 65px;
+    }
+    &-title {
+        display: flex;
+        align-items: center;
+        gap: 45px;
+        margin-bottom: 0;
+        text-align: center;
+        width: max-content !important;
+        
+        .title {
+            @include transition (.3s);
+            cursor: pointer;
+            display: block;
+            color: rgb(255, 255, 255);
+            font-size: 72px;
+            font-weight: 700;
+            line-height: 1;
+            letter-spacing: -1px;
+            position: relative;
+            z-index: 1;
+            @media #{$md}{
+                font-size: 40px;
+            }
+            &::before {
+                position: absolute;
+                left: 0;
+                bottom: 0;
+                width: 100%;
+                height: 2px;
+                content: "";
+                background: var(--clr-theme-primary);
+                @include transition (.3s);
+                opacity: 0;
+                visibility: hidden;
+            }
+        }
+        
+        img {
+            width: 70px;
+            @media #{$lg}{
+                width: 60px;
+            }
+            @media #{$md}{
+                width: 50px;
+            }
+        }
+
+        &:hover {
+            .title {
+                color: var(--clr-theme-primary);
+                &::before {
+                    opacity: 1;
+                    visibility: visible;
+                }
+            }
+        }
+    }
+}
+
+/* ///////////////////////////////////////////////////////////
+inner heading Start
+/////////////////////////////////////////////////////////// */  
+

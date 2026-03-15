@@ -1,0 +1,88 @@
+/* ///////////////////////////////////////////////////////////
+04. section CSS
+/////////////////////////////////////////////////////////// */ 
+@use '../abstracts/variables' as *;
+
+
+.h2_nh_choose {
+  &-img {
+    &.ml-65 {
+      @media #{$xxl}{
+        margin-left: 40px;
+      }
+      @media #{$xl}{
+        margin-left: 30px;
+      }
+      @media #{$lg}{
+        margin-left: 0;
+      }
+      @media #{$md}{
+        margin-left: 0;
+      }
+    }
+    &.mr-65 {
+      @media #{$xxl}{
+        margin-right: 40px;
+      }
+      @media #{$xl}{
+        margin-right: 30px;
+      }
+      @media #{$lg}{
+        margin-right: 0;
+      }
+      @media #{$md}{
+        margin-right: 0;
+      }
+    }
+  }
+  &-content {
+    &.mr-70 {
+      @media #{$xxl}{
+        margin-right: 40px;
+      }
+      @media #{$xl}{
+        margin-right: 30px;
+      }
+      @media #{$lg}{
+        margin-right: 0;
+      }
+    }
+    
+    &.ml-70 {
+      @media #{$xxl}{
+        margin-left: 40px;
+      }
+      @media #{$xl}{
+        margin-left: 30px;
+      }
+      @media #{$lg}{
+        margin-left: 0;
+      }
+    }
+    
+  }
+  &-counter {
+    display: flex;
+    align-items: center;
+    gap: 60px;
+    flex-wrap: wrap;
+    row-gap: 30px;
+    &-item {
+      &-title {
+        color: rgb(15, 41, 31);
+        font-size: 36px;
+        font-weight: 700;
+        line-height: 1.2;
+        letter-spacing: -1px;
+        margin-bottom: 0;
+      }
+      &-subtitle {
+        color: rgb(71, 85, 105);
+        font-size: 16px;
+        font-weight: 400;
+        line-height: 26px;
+        display: block;
+      }
+    }
+  }
+}

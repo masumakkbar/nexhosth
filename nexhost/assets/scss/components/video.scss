@@ -1,0 +1,42 @@
+/* ///////////////////////////////////////////////////////////
+02. video CSS
+/////////////////////////////////////////////////////////// */ 
+@use '../abstracts/variables' as *;
+
+
+
+/* ///////////////////////////////////////////////////////////
+Header CSS o1 Start
+/////////////////////////////////////////////////////////// */  
+
+.nh_video {
+    &-area {
+        margin-top: -210px;
+        position: relative;
+        z-index: 1;
+    }
+    &-wrap {
+        position: relative;
+        z-index: 1;
+    }
+    &-btn {
+        position: absolute;
+        left: 50%;
+        top: 47%;
+        transform: translate(-50%, -50%);
+        width: 90px;
+        height: 90px;
+        border-radius: 50%;
+        background-color: #fff;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 29px;
+        color: var(--clr-theme-primary);
+        @media #{$xs}{
+            width: 60px;
+            height: 60px;
+            font-size: 20px;
+        }
+    }
+}

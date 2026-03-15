@@ -1,0 +1,171 @@
+/* ///////////////////////////////////////////////////////////
+02. video CSS
+/////////////////////////////////////////////////////////// */ 
+@use '../abstracts/variables' as *;
+
+/* ///////////////////////////////////////////////////////////
+Header CSS 01 Start
+/////////////////////////////////////////////////////////// */  
+
+.nh_work {
+    &-content {
+        &-subtitle {
+            border-radius: 4px;
+            background: var(--clr-theme-primary-soft);
+            height: 26px;
+            display: inline-flex;
+            align-items: center;
+            padding: 0 16px;
+            color: var(--clr-theme-primary);
+            font-family: $manrope;
+            font-size: 14px;
+            font-weight: 700;
+            line-height: normal;
+            letter-spacing: 1px;
+            text-transform: uppercase;
+            margin-bottom: 22px;
+        }
+        &-title {
+            color: rgb(11, 12, 15);
+            font-size: 72px;
+            font-weight: 700;
+            line-height: 1.2;
+            letter-spacing: -2px;
+            margin-bottom: 25px;
+            @media #{$xl}{
+                font-size: 65px;
+            }
+            @media #{$md}{
+                font-size: 50px;
+            }
+            @media #{$xxs}{
+                font-size: 32px;
+            }
+        }
+    }
+}
+
+/* ///////////////////////////////////////////////////////////
+Header CSS 02 Start
+/////////////////////////////////////////////////////////// */  
+
+.h2_nh_work {
+    &-area {
+        position: relative;
+        z-index: 1;
+        margin-bottom: -220px;
+    }
+    &-wrap {
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: center center;
+        border-radius: 10px;
+        padding-left: 30px;
+        padding-right: 30px;
+        @media #{$xxs}{
+            padding-left: 20px;
+            padding-right: 20px;
+        }
+    }
+    &-content {
+        &-title {
+            color: rgb(255, 255, 255);
+            font-size: 48px;
+            font-weight: 700;
+            line-height: 1.2;
+            letter-spacing: -1px;
+            margin-bottom: 25px;
+            @media #{$sm}{
+                font-size: 44px;
+            }
+            @media #{$xs}{
+                font-size: 40px;
+            }
+            @media #{$xxs}{
+                font-size: 30px;
+            }
+        }
+        p {
+            color: rgb(255, 255, 255);
+            font-size: 16px;
+            font-weight: 400;
+            line-height: 26px;
+            margin-bottom: 33px;
+            @media #{$sm}{
+                br {
+                    display: none;
+                }
+            }
+        }
+    }
+}
+
+// home 5 
+
+.h5_nh_work {
+    &-wrap {
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: center center;
+        min-height: 600px;
+        display: flex;
+        align-items: end;
+    }
+    &-content {
+        background: var(--clr-common-black);
+        padding: 40px 50px 40px;
+        margin-bottom: -100px;
+        position: relative;
+        z-index: 1;
+        @media #{$xxs}{
+            padding: 40px 25px 40px;
+        }
+        &::after {
+            position: absolute;
+            right: 0;
+            bottom: 0;
+            content: "";
+            width: 20px;
+            height: 20px;
+            background-color: var(--clr-body-heading);
+            z-index: 1;
+        }
+        &-title {
+            color: rgb(255, 255, 255);
+            font-size: 48px;
+            font-weight: 700;
+            line-height: 1.2;
+            letter-spacing: -2px;
+            margin-bottom: 41px;
+            @media #{$xl}{
+                font-size: 44px;
+            }
+            @media #{$sm}{
+                font-size: 36px;
+            }
+            @media #{$xxs}{
+                font-size: 30px;
+            }
+        }
+        img {
+            margin-bottom: 22px;
+        }
+        &-btn {
+            height: 57px;
+            display: inline-flex;
+            align-items: center;
+            background: var(--clr-theme-primary);
+            padding: 0 28px;
+            gap: 8px;
+            border-radius: 50px;
+            color: rgb(247, 247, 247);
+            font-size: 16px;
+            font-weight: 600;
+            line-height: 20px;
+            &:hover {
+                background-color: #fff;
+                color: var(--clr-theme-primary);
+            }
+        }
+    }
+}

@@ -1,0 +1,285 @@
+/* ///////////////////////////////////////////////////////////
+02. price CSS
+/////////////////////////////////////////////////////////// */ 
+@use '../abstracts/variables' as *;
+
+
+
+/* ///////////////////////////////////////////////////////////
+Header CSS 01 Start
+/////////////////////////////////////////////////////////// */  
+
+.nh_price-tab {
+    display: flex;
+    .nav-tabs {
+        border: 1px solid rgb(242, 242, 242);
+        border-radius: 8px;
+        padding: 4px;
+        background-color: #fff;
+        .nav-link {
+            height: 46px;
+            border-radius: 8px;
+            border: 0;
+            padding: 0 38px;
+
+            color: var(--clr-body-heading);
+            font-family: $manrope;
+            font-size: 16px;
+            font-weight: 600;
+            line-height: 20px;
+            text-transform: capitalize;
+            &.active {
+                background-color: var(--clr-theme-primary);
+                color: #fff;
+            }
+        }
+    }
+}
+.nh_price {
+    &-item {
+        border: 1px solid rgb(242, 242, 242);
+        border-radius: 10px;
+        background: rgb(255, 255, 255);
+        padding: 40px 30px 50px;
+        &.active {
+            border: 1px solid rgb(6, 177, 110);
+            border-radius: 10px;
+            background: rgb(229, 248, 240);
+            margin-top: 0;
+        }
+        &.mt-30 {
+            @media #{$md}{
+                margin-top: 0;
+            }
+        }
+        &-head {
+            margin-bottom: 27px;
+            h3 {
+                color: rgb(6, 177, 110);
+                font-size: 28px;
+                font-weight: 700;
+                line-height: 1;
+                letter-spacing: -1px;
+                margin-bottom: 14px;
+            }
+            p {
+                color: rgb(71, 85, 105);
+                font-size: 18px;
+                font-weight: 600;
+                line-height: 20px;
+                margin-bottom: 0;
+            }
+        }
+        &-amount {
+            border-top: 1px solid rgb(242, 242, 242);
+            border-bottom: 1px solid rgb(242, 242, 242);
+            padding-top: 20px;
+            padding-bottom: 24px;
+            margin-bottom: 40px;
+            h1 {
+                color: rgb(6, 177, 110);
+                font-size: 64px;
+                font-weight: 600;
+                line-height: 1;
+                letter-spacing: -1px;
+                margin-bottom: 0;
+                @media #{$sm}{
+                    font-size: 60px;
+                }
+                @media #{$xs}{
+                    font-size: 56px;
+                }
+                @media #{$xxs}{
+                    font-size: 50px;
+                }
+                span {
+                    color: rgb(71, 85, 105);
+                    font-size: 16px;
+                    font-weight: 500;
+                    line-height: 20px;
+                    letter-spacing: 0;
+                    margin-left: 5px;
+                }
+            }
+        }
+        &-list {
+            margin-bottom: 40px;
+            ul {
+                list-style: none;
+                li {
+                    display: flex;
+                    align-items: center;
+                    gap: 10px;
+                    color: rgb(71, 85, 105);
+                    font-size: 16px;
+                    font-weight: 600;
+                    line-height: 20px;
+                    margin-bottom: 25px;
+                    &:last-child {
+                        margin-bottom: 0;
+                    }
+                    i {
+                        width: 20px;
+                        height: 20px;
+                        background: #E9F8F2;
+                        border-radius: 50%;
+                        display: flex;
+                        align-items: center;
+                        justify-content: center;
+                        color: var(--clr-theme-primary);
+                        font-size: 12px;
+                    }
+                }
+            }
+        }
+        &-btn {
+            a {
+                width: 100%;
+                height: 60px;
+                background-color: var(--clr-theme-primary);
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                color: rgb(255, 255, 255);
+                font-size: 16px;
+                font-weight: 600;
+                line-height: 20px;
+                text-transform: capitalize;
+                border-radius: 10px;
+                padding: 0 30px;
+            }
+        }
+    }
+}
+
+/* ///////////////////////////////////////////////////////////
+Header CSS 01 Start
+/////////////////////////////////////////////////////////// */ 
+
+.h2_nh_price-area {
+    .nh_price-item {
+        &-btn {
+            a {
+                background: rgba(6, 177, 110, 0.1);
+                color: var(--clr-theme-primary);
+                &:hover {
+                    background-color: var(--clr-theme-primary);
+                    color: #fff;
+                }
+            }
+        }
+        &.active {
+            border: 1px solid rgb(6, 177, 110);
+            border-radius: 10px;
+            background: #fff;
+            margin-top: 0;
+            .nh_price-item-btn a {
+                background-color: var(--clr-theme-primary);
+                color: #fff;
+            }
+        }
+        
+    }
+}
+
+/* ///////////////////////////////////////////////////////////
+Header CSS 01 Start
+/////////////////////////////////////////////////////////// */ 
+
+.h3_nh_price-area {
+    .nh_price-item {
+        &-btn {
+            a {
+                background-color: var(--clr-theme-primary);
+                color: #fff;
+                &:hover {
+                    background-color: var(--clr-common-black);
+                    color: #fff;
+                }
+            }
+        }
+        &.active {
+            border: 1px solid rgb(6, 177, 110);
+            border-radius: 10px;
+            background: rgb(229, 248, 240);
+        }
+        
+    }
+}
+
+/* ///////////////////////////////////////////////////////////
+Header CSS 01 Start
+/////////////////////////////////////////////////////////// */ 
+
+.h4_nh_price-area {
+    .nh_price-item {
+        &-btn {
+            a {
+                background: rgba(6, 177, 110, 0.1);
+                color: var(--clr-theme-primary);
+                &:hover {
+                    background-color: var(--clr-theme-primary);
+                    color: #fff;
+                }
+            }
+        }
+        &.active {
+            border: 1px solid rgb(6, 177, 110);
+            border-radius: 10px;
+            background: var(--clr-common-black);
+            margin-top: 0;
+            .nh_price-item {
+                &-head {
+                    margin-bottom: 27px;
+                    p {
+                        color: #fff;
+                    }
+                }
+                &-amount {
+                    border-top: 1px solid rgb(255, 255, 255, 0.2);
+                    border-bottom: 1px solid rgb(255, 255, 255, 0.2);
+                    h1 {
+                        span {
+                            color: #fff;
+                        }
+                    }
+                }
+                &-list {
+                    ul {
+                        li {
+                            color: #fff;
+                            i {
+                                background: var(--clr-theme-primary);
+                                color: #fff;
+                            }
+                        }
+                    }
+                }
+                &-btn a {
+                    background-color: var(--clr-theme-primary);
+                    color: #fff;
+                    &:hover {
+                        color: var(--clr-theme-primary);
+                        background-color: #fff;
+                    }
+                }
+            }
+        }
+        
+    }
+}
+.h4_nh_combine_section {
+    position: relative;
+    z-index: 1;
+    &::before {
+        position: absolute;
+        left: 0;
+        top: 0;
+        content: "";
+        width: 100%;
+        height: 100%;
+        background: linear-gradient(180.00deg, rgba(6, 177, 110, 0),rgba(6, 177, 110, 0.1) 100%);
+        z-index: -1;
+    }
+
+}

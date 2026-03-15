@@ -1,0 +1,414 @@
+/* ///////////////////////////////////////////////////////////
+02. service CSS
+/////////////////////////////////////////////////////////// */ 
+@use '../abstracts/variables' as *;
+
+
+
+/* ///////////////////////////////////////////////////////////
+Header CSS 01 Start
+/////////////////////////////////////////////////////////// */  
+
+.nh_service {
+    &-item {
+        padding: 30px 30px 30px;
+        @include transition (.3s);
+        border: 1px solid rgb(242, 242, 242);
+        border-radius: 10px;
+        background: rgb(255, 255, 255);
+        @media #{$sm}{
+            padding: 30px 25px 30px;
+        }
+        &-icon {
+            width: 80px;
+            height: 80px;
+            border-radius: 50%;
+            background: rgba(6, 177, 110, 0.1);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-left: auto;
+            margin-right: auto;
+            margin-bottom: 20px;
+            @include transition(.3s);
+            svg {
+                color: var(--clr-theme-primary);
+            }
+        }
+        &-content {
+            text-align: center;
+            &-title {
+                color: rgb(0, 0, 0);
+                font-size: 24px;
+                font-weight: 700;
+                line-height: 1.4;
+                letter-spacing: -0.8px;
+                margin-bottom: 16px;
+                @include transition(.3s);
+            }
+            p {
+                @include transition(.3s);
+                color: rgb(133, 133, 133);
+                font-size: 16px;
+                font-weight: 400;
+                line-height: 26px;
+                margin-bottom: 23px;
+            }
+            &-btn {
+                @include transition(.3s);
+                display: inline-flex;
+                align-items: center;
+                height: 41px;
+                padding: 0 30px;
+                border-radius: 8px;
+                color: var(--clr-body-heading);
+                font-size: 14px;
+                font-weight: 600;
+                line-height: normal;
+                text-transform: capitalize;
+                border: 1px solid rgba(217, 217, 217, 0.5);
+                
+            }
+        }
+        &:hover {
+            background-color: var(--clr-theme-primary);
+            .nh_service-item {
+                &-icon {
+                    background-color: #fff;
+                }
+                &-content {
+                    &-title {
+                        color: #fff;
+                    }
+                    p {
+                        color: rgba(255, 255, 255, 0.7);
+                    }
+                    &-btn {
+                        background-color: var(--clr-body-heading);
+                        border-color: var(--clr-body-heading);
+                        color: #fff;
+                    }
+                }
+            }
+        }
+    }
+}
+
+/* ///////////////////////////////////////////////////////////
+Header CSS 02 Start
+/////////////////////////////////////////////////////////// */ 
+
+.h2_nh_service {
+    &-item {
+        padding: 30px 30px 30px;
+        border-bottom: 1px solid #F2F2F2;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 30px;
+        @include transition (.3s);
+        cursor: pointer;
+        @media #{$md}{
+            flex-wrap: wrap;
+        }
+        @media #{$xs}{
+            padding-left: 20px;
+            padding-right: 20px;
+        }
+        &-heading {
+            display: flex;
+            align-items: center;
+            gap: 30px;
+            width: 45%;
+            @media #{$md}{
+                width: 100%;
+                gap: 25px;
+            }
+            @media #{$xxs}{
+                flex-wrap: wrap;
+            }
+            span {
+                display: block;
+                color: var(--clr-body-heading);
+                font-size: 32px;
+                font-weight: 700;
+                line-height: 1.2;
+                letter-spacing: -1px;
+                // text-align: center;
+            }
+            &-icon {
+                width: 105px;
+                height: 105px;
+                background: rgb(230, 247, 240);
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                border-radius: 50%;
+                color: var(--clr-theme-primary);
+                @include transition (.3s);
+                flex-shrink: 0;
+            }
+            &-title {
+                color: var(--clr-body-heading);
+                font-size: 24px;
+                font-weight: 700;
+                line-height: 32px;
+                letter-spacing: -0.5px;
+                // text-align: left;
+                margin-bottom: 0;
+                &:hover a {
+                    color: var(--clr-theme-primary);
+                }
+            }
+        }
+        &-content {
+            width: 40%;
+            @media #{$md}{
+                width: 60%;
+            }
+            @media #{$sm}{
+                width: calc(100% - 120px);
+            }
+            @media #{$xxs}{
+                width: 100%;
+            }
+            p {
+                color: rgb(133, 133, 133);
+                font-size: 16px;
+                font-weight: 400;
+                line-height: 26px;
+                margin-bottom: 0;
+            }
+        }
+        &-icon {
+            width: 80px;
+            height: 80px;
+            box-sizing: border-box;
+            border: 1px solid rgb(242, 242, 242);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 50%;
+            color: rgb(15, 41, 31, 0.5);
+            @include transition (.3s);
+            flex-shrink: 0;
+        }
+        &:hover {
+            background: rgba(6, 177, 110, 0.1);
+            border-radius: 5px;
+            .h2_nh_service-item {
+                &-heading {
+                    &-icon {
+                        background: var(--clr-theme-primary);
+                        color: #fff;
+                    }
+                }
+                &-icon {
+                    border-color: transparent;
+                    background: var(--clr-body-heading);
+                    color: #fff;
+                }
+            }
+        }
+    }
+}
+
+/* ///////////////////////////////////////////////////////////
+Header CSS 02 Start
+/////////////////////////////////////////////////////////// */ 
+
+.h3_nh_service {
+    &-item {
+        display: flex;
+        align-items: center;
+        gap: 20px;
+        padding: 28px 30px 28px;
+        border-bottom: 1px solid #F2F2F2;
+        @include transition (.3s);
+        @media #{$lg}{
+            padding: 28px 20px 28px;
+        }
+        @media #{$xxs}{
+            flex-wrap: wrap;
+        }
+        &:last-child {
+            border-bottom: 0;
+        }
+        &-icon {
+            width: 86px;
+            height: 86px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: rgb(6, 177, 110, 0.08);
+            flex-shrink: 0;
+            border-radius: 50%;
+            color: var(--clr-theme-primary);
+            @include transition (.3s);
+            @media #{$xs}{
+                width: 80px;
+                height: 80px;
+            }
+        }
+        &-content {
+            h5 {
+                color: rgb(11, 12, 15, 0.7);
+                font-size: 20px;
+                font-weight: 700;
+                line-height: 1.4;
+                letter-spacing: -1px;
+                margin-bottom: 11px;
+                &:hover a {
+                    color: var(--clr-theme-primary);
+                }
+            }
+            p {
+                color: rgb(133, 133, 133);
+                font-size: 16px;
+                font-weight: 400;
+                line-height: 26px;
+                margin-bottom: 0;
+            }
+        }
+        &:hover {
+            border-radius: 5px;
+            background: rgb(6, 177, 110, 0.1);
+            .h3_nh_service-item-icon {
+                background: var(--clr-theme-primary);
+                color: #fff;
+            }
+        }
+    }
+    &-img {
+        &.ml-50 {
+            @media #{$xl}{
+                margin-left: 20px;
+            }
+            @media #{$lg}{
+                margin-left: 0;
+            }
+        }
+    }
+    &-wrap {
+        &.mr-20 {
+            @media #{$lg}{
+                margin-right: 0;
+            }
+        }
+    }
+}
+
+
+// inner service 
+
+.nh_inner_service {
+    &-item {
+        position: relative;
+        z-index: 1;
+        padding: 40px 30px 33px;
+        box-sizing: border-box;
+        border: 1px solid rgb(242, 242, 242);
+        border-radius: 6px;
+        @include transition (.3s);
+        &:hover {
+            box-shadow: 0px 8px 40px 0px rgba(11, 12, 15, 0.08);
+            background: rgb(255, 255, 255);
+            border-color: #fff;
+        }
+        &-icon {
+            width: 60px;
+            height: 60px;
+            background: rgb(229, 248, 240);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: var(--clr-theme-primary);
+            border-radius: 50%;
+            margin-bottom: 28px;
+        }
+        &-title {
+            color: var(--clr-body-heading);
+            font-size: 24px;
+            font-weight: 700;
+            line-height: 1.2;
+            letter-spacing: -0.5px;
+            margin-bottom: 23px;
+            &:hover {
+                color: var(--clr-theme-primary);
+            }
+        }
+        &-text {
+            color: rgb(133, 133, 133);
+            font-size: 16px;
+            font-weight: 400;
+            line-height: 26px;
+            margin-bottom: 0;
+        }
+    }
+}
+
+
+
+.inn_nh_service {
+    &-item {
+        border: 1px solid rgb(242, 242, 242);
+        padding: 25px 25px 18px;
+        border-radius: 8px;
+        &-top {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            margin-bottom: 25px;
+        }
+        &-icon {
+            width: 48px;
+            height: 48px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border: 1px solid rgb(242, 242, 242);
+            border-radius: 4px;
+        }
+        &-link {
+            background: #f3f4f6;
+            padding: 8px 8px 8px 14px;
+            border-radius: 6px;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            font-size: 14px;
+            line-height: 1;
+            &:hover {
+                background-color: #e5e7eb;
+            }
+            .title {
+                margin-bottom: 1px;
+                font-size: 14px;
+                font-weight: 600;
+                color: var(--clr-body-heading);
+            }
+            .icon {
+                width: 24px;
+                height: 24px;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                border-radius: 4px;
+                background-color: #fff;
+            }
+        }
+        &-title {
+            font-size: 20px;
+            color: var(--clr-body-heading);
+            letter-spacing: -.32px;
+            margin-bottom: 5px;
+            line-height: 1.2;
+            font-weight: 600;
+        }
+        &-bottom {
+            p {
+                margin-bottom: 0;
+            }
+        }
+    }
+}

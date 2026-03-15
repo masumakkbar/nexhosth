@@ -1,0 +1,87 @@
+/* ///////////////////////////////////////////////////////////
+04. section CSS
+/////////////////////////////////////////////////////////// */ 
+@use '../abstracts/variables' as *;
+
+
+.h5_nh_process {
+    &-item {
+        background-color: #fff;
+        border-radius: 8px;
+        position: relative;
+        z-index: 1;
+        padding: 30px 30px 23px;
+        &::after {
+            position: absolute;
+            right: -20px;
+            top: 30px;
+            width: 40px;
+            height: 40px;
+            background: #F7F7F7;
+            content: "";
+            border-radius: 50%;
+        }
+        &-number {
+            width: 40px;
+            height: 40px;
+            background: rgb(15, 41, 31);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #fff;
+            border-radius: 50%;
+            font-size: 16px;
+            font-weight: 700;
+            line-height: 28px;
+            margin-bottom: 22px;
+        }
+        &-title {
+            color: rgb(11, 12, 15);
+            font-size: 24px;
+            font-weight: 700;
+            line-height: 32px;
+            letter-spacing: -0.5px;
+            margin-bottom: 16px;
+        }
+        &-text {
+            color: rgb(133, 133, 133);
+            font-size: 16px;
+            font-weight: 400;
+            line-height: 26px;
+            margin-bottom: 0;
+        }
+    }
+}
+
+.h5_nh_process_main {
+    &:not(:last-child){
+        .h5_nh_process-item {
+            &::before {
+                position: absolute;
+                right: -30px;
+                top: 12px;
+                content: "";
+                width: 50px;
+                height: 40px;
+                border-bottom: 2px dashed rgba(15, 41, 31, 0.2);
+                z-index: 1;
+            }
+        }
+    }
+    &:nth-child(2){
+        .h5_nh_process-item {
+            &::before {
+                @media #{$md}{
+                    display: none;
+                }
+            }
+        }
+    }
+    .h5_nh_process-item {
+        &::before {
+            @media #{$xs}{
+                display: none;
+            }
+        }
+    }
+}

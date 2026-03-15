@@ -1,0 +1,161 @@
+/* ///////////////////////////////////////////////////////////
+02. about CSS
+/////////////////////////////////////////////////////////// */ 
+@use '../abstracts/variables' as *;
+
+.nh_about {
+    &-img {
+        &.ml-15 {
+            @media #{$lg}{
+                margin-left: 0;
+            }
+        }
+        &.mr-15 {
+            @media #{$xl}{
+                margin-right: 0;
+            }
+        }
+        &.mr-35 {
+            @media #{$xl}{
+                margin-right: 15px;
+            }
+            @media #{$lg}{
+                margin-right: 0px;
+            }
+        }
+        &.mr-50 {
+            @media #{$xxl}{
+                margin-right: 30px;
+            }
+            @media #{$xl}{
+                margin-right: 20px;
+            }
+            @media #{$lg}{
+                margin-right: 0px;
+            }
+        }
+    }
+    &-left {
+        &.mr-20 {
+            @media #{$xl}{
+                margin-right: 10px;
+            }
+            @media #{$lg}{
+                margin-right: 0;
+            }
+        }
+        &.ml-20 {
+            @media #{$xl}{
+                margin-left: 10px;
+            }
+            @media #{$lg}{
+                margin-left: 0;
+            }
+        }
+    }
+}
+
+.h2_nh_about {
+    &-list {
+        ul {
+            list-style: none;
+            li {
+                display: flex;
+                align-items: center;
+                gap: 10px;
+                color: rgb(71, 85, 105);
+                font-size: 16px;
+                font-weight: 600;
+                line-height: 20px;
+                margin-bottom: 25px;
+                &:last-child {
+                    margin-bottom: 0;
+                }
+                i {
+                    width: 20px;
+                    height: 20px;
+                    background: #E9F8F2;
+                    border-radius: 50%;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    color: var(--clr-theme-primary);
+                    font-size: 12px;
+                }
+            }
+        }
+    }
+}
+
+// home 3 css 
+
+.h3_nh_about-text {
+    border-radius: 8px;
+    background: rgba(6, 177, 110, 0.08);
+    padding: 23px 20px 23px 42px;
+    position: relative;
+    z-index: 1;
+    width: max-content;
+    @media #{$lg}{
+        width: auto;
+    }
+    &::before {
+        position: absolute;
+        left: 20px;
+        top: 50%;
+        transform: translateY(-50%);
+        content: "";
+        width: 12px;
+        height: 12px;
+        background: #e4f4f0;
+        border-radius: 50%;
+        border: 3px solid var(--clr-theme-primary);
+    }
+    & p {
+        color: rgb(6, 177, 110);
+        font-size: 16px;
+        font-weight: 600;
+        line-height: 26px;
+        letter-spacing: -0.2px;
+        margin-bottom: 0;
+    }
+}
+
+
+// home 5 
+
+
+.h5_nh_about {
+    &-list {
+        ul {
+            list-style: none;
+            display: grid;
+            align-items: center;
+            grid-template-columns: 1fr 1fr;
+            row-gap: 20px;
+            @media #{$xxs}{
+                grid-template-columns: 1fr;
+            }
+            li {
+                display: flex;
+                align-items: center;
+                gap: 10px;
+                color: var(--clr-body-heading);
+                font-size: 16px;
+                font-weight: 600;
+                line-height: 20px;
+                i {
+                    width: 20px;
+                    height: 20px;
+                    background: var(--clr-theme-primary);
+                    border-radius: 50%;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    color: #fff;
+                    font-size: 12px;
+                }
+            }
+        }
+    }
+}

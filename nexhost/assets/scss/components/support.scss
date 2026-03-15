@@ -1,0 +1,18 @@
+/* ///////////////////////////////////////////////////////////
+02. video CSS
+/////////////////////////////////////////////////////////// */ 
+@use '../abstracts/variables' as *;
+
+.nh_inner_support-img {
+    &.mr-50 {
+        @media #{$xxl}{
+            margin-right: 30px;
+        }
+        @media #{$xl}{
+            margin-right: 20px;
+        }
+        @media #{$lg}{
+            margin-right: 0px;
+        }
+    }
+}

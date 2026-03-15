@@ -1,0 +1,540 @@
+
+/* ///////////////////////////////////////////////////////////
+02. Header CSS
+/////////////////////////////////////////////////////////// */ 
+@use '../abstracts/variables' as *;
+
+/* ///////////////////////////////////////////////////////////
+Header CSS 01 Start
+/////////////////////////////////////////////////////////// */ 
+
+.nh_header {
+    &-area {
+        position: absolute;
+        left: 0;
+        top: 0;
+        width: 100%;
+        z-index: 9999;
+        border-bottom: 1px solid rgba(15, 41, 31, 0.08);
+    }
+    &-wrap {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        @media #{$lg}{
+            padding-top: 20px;
+            padding-bottom: 20px;
+        }
+        @media #{$xs}{
+            padding-top: 15px;
+            padding-bottom: 15px;
+        }
+    }
+    &-logo {
+        width: 150px;
+        @media #{$sm}{
+            width: 140px;
+        }
+        img {
+            width: 100%;
+        }
+    }
+    &-menu {
+        @media #{$lg}{
+            display: none;
+        }
+        nav {
+            ul {
+                display: flex;
+                align-items: center;
+                list-style: none;
+                gap: 40px;
+                margin-bottom: 0;
+                .menu-has-child {
+                    position: relative;
+                    z-index: 99;
+                    text-align: start;
+                }
+                li {
+                    a {
+                        color: var(--clr-body-text);
+                        display: block;
+                        color: rgb(71, 85, 105);
+                        font-family: $manrope;
+                        font-size: 16px;
+                        font-weight: 500;
+                        height: 100px;
+                        line-height: 100px;
+                        border-bottom: 3px solid transparent;
+                    }
+                    .submenu {
+                        position: absolute;
+                        left: 0;
+                        top: 100%;
+                        background: #fff;
+                        width: 240px;
+                        opacity: 0;
+                        padding: 0;
+                        visibility: hidden;
+                        @include transition(.3s);
+                        box-shadow: 0 9px 19px rgba(0,0,0,0.1);
+                        display: block;
+                        li {
+                            display: block;
+                            margin-right: 0;
+                            position: relative;
+                            z-index: 99;
+                            a {
+                                padding: 12px 25px ;
+                                color: var(--clr-common-black);
+                                @include transition(.3s);
+                                height: auto;
+                                line-height: 20px;
+                                border-bottom: 0;
+                            }
+                            & .submenu {
+                                left: 100%;
+                                top: 0;
+                            }
+                            &:hover > a {
+                                background-color: var(--clr-theme-primary);
+                                color: #fff;
+                            }
+                            &:not(:last-child) {
+                                border-bottom: 1px solid #f2f2f2;
+                            }
+                        }
+                    }
+                    &:hover > {
+                        .submenu {
+                            opacity: 1;
+                            visibility: visible;
+                            
+                        }
+                        a {
+                            color: var(--clr-theme-primary);
+                            border-color: var(--clr-theme-primary);
+                        }
+                    }
+                }
+            }
+        }
+    }
+    &-action {
+        display: flex;
+        align-items: center;
+        gap: 30px;
+        &-menu {
+            width: 45px;
+            height: 45px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border: 1px solid #0F291F;
+            border-radius: 50%;
+            font-size: 22px;
+            color: #0F291F;
+        }
+        &-search {
+            font-size: 25px;
+            color: #0F291F;
+        }
+    }
+}
+
+/* ///////////////////////////////////////////////////////////
+Header CSS 03 Start
+/////////////////////////////////////////////////////////// */ 
+
+.h3_nh_header {
+    &-top {
+        background-color: var(--clr-theme-primary);
+        padding-top: 15px;
+        padding-bottom: 15px;
+        @media #{$xs}{
+            display: none;
+        }
+    }
+    &-contact {
+        display: flex;
+        align-items: center;
+        @media #{$md}{
+            justify-content: center;
+            margin-bottom: 10px;
+        }
+        span {
+            color: rgb(255, 255, 255, 0.9);
+            font-size: 15px;
+            font-weight: 400;
+            line-height: 20px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            &:not(:last-child){
+                border-right: 1px solid rgb(255, 255, 255, 0.3);
+                margin-right: 20px;
+                padding-right: 20px;
+            }
+        }
+    }
+    &-action {
+        display: flex;
+        align-items: center;
+        justify-content: end;
+        @media #{$md}{
+            justify-content: center;
+        }
+    }
+    &-user {
+        span {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            color: rgb(255, 255, 255, 0.9);
+            font-size: 15px;
+            font-weight: 400;
+            line-height: 20px;
+        }
+    }
+    &-social {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+        color: rgba(255, 255, 255, 0.9);
+        font-size: 15px;
+        font-weight: 400;
+        line-height: 20px;
+        border-left: 1px solid rgba(255, 255, 255, 0.3);
+        padding-left: 20px;
+        margin-left: 20px;
+        &-list {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            a {
+                width: 18px;
+                height: 18px;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                background: rgba(255, 255, 255, 0.6);
+                border-radius: 50%;
+                color: var(--clr-theme-primary);
+                font-size: 10px;
+                &:hover {
+                    background: #fff;
+                }
+            }
+        }
+    }
+}
+
+/* ///////////////////////////////////////////////////////////
+Header CSS 01 Start
+/////////////////////////////////////////////////////////// */ 
+
+.h4_nh_header {
+    &-area {
+        position: absolute;
+        left: 0;
+        top: 0;
+        width: 100%;
+        z-index: 99;
+    }
+    &-wrap {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        @media #{$lg}{
+            padding-top: 20px;
+            padding-bottom: 20px;
+        }
+        @media #{$xs}{
+            padding-top: 15px;
+            padding-bottom: 15px;
+        }
+    }
+    &-menu {
+        @media #{$lg}{
+            display: none;
+        }
+        nav {
+            ul {
+                display: flex;
+                align-items: center;
+                list-style: none;
+                gap: 40px;
+                margin-bottom: 0;
+                .menu-has-child {
+                    position: relative;
+                    z-index: 99;
+                    text-align: start;
+                }
+                li {
+                    &:is(.menu-has-child) > a::after {
+                        display: inline-block;
+                        font-family: "Font Awesome 6 Pro";
+                        content: "\f107";
+                        font-size: 12px;
+                        font-weight: 500;
+                        margin-left: 5px;
+                        color: var(--clr-theme-primary);
+                    }
+                    a {
+                        color: #fff;
+                        display: block;
+                        font-family: $manrope;
+                        font-size: 16px;
+                        font-weight: 500;
+                        height: 80px;
+                        line-height: 80px;
+                    }
+                    .submenu {
+                        position: absolute;
+                        left: 0;
+                        top: 100%;
+                        background: #fff;
+                        width: 240px;
+                        opacity: 0;
+                        padding: 0;
+                        visibility: hidden;
+                        @include transition(.3s);
+                        box-shadow: 0 9px 19px rgba(0,0,0,0.1);
+                        display: block;
+                        li {
+                            display: block;
+                            margin-right: 0;
+                            position: relative;
+                            z-index: 99;
+                            a {
+                                padding: 12px 25px ;
+                                color: var(--clr-common-black);
+                                @include transition(.3s);
+                                height: auto;
+                                line-height: 20px;
+                            }
+                            & .submenu {
+                                left: 100%;
+                                top: 0;
+                            }
+                            &:hover > a {
+                                background-color: var(--clr-theme-primary);
+                                color: #fff;
+                            }
+                            &:not(:last-child) {
+                                border-bottom: 1px solid #f2f2f2;
+                            }
+                        }
+                    }
+                    &:hover > {
+                        .submenu {
+                            opacity: 1;
+                            visibility: visible;
+                            
+                        }
+                        a {
+                            color: var(--clr-theme-primary);
+                        }
+                    }
+                }
+            }
+        }
+    }
+    &-action {
+        display: flex;
+        align-items: center;
+        gap: 30px;
+        &-menu {
+            width: 45px;
+            height: 45px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background-color: var(--clr-theme-primary);
+            border-radius: 50%;
+            font-size: 22px;
+            color: #fff;
+            @include transition (.3s);
+            &:hover {
+                background-color: #fff;
+                color: var(--clr-theme-primary);
+            }
+        }
+        &-search {
+            font-size: 25px;
+            color: #fff;
+        }
+    }
+}
+
+// home 5 
+
+.h5_nh_header {
+    &-top {
+        background-color: var(--clr-theme-primary);
+        padding-top: 13px;
+        padding-bottom: 13px;
+        @media #{$sm}{
+            display: none;
+        }
+        &-contact {
+            display: flex;
+            align-items: center;
+            @media #{$lg}{
+                justify-content: center;
+                margin-bottom: 10px;
+            }
+            span {
+                display: flex;
+                align-items: center;
+                gap: 10px;
+
+                color: rgb(255, 255, 255);
+                font-size: 16px;
+                font-weight: 500;
+                line-height: 18px;
+                text-transform: capitalize;
+                &:not(:last-child){
+                    border-right: 1px solid rgb(255, 255, 255, 0.3);
+                    margin-right: 20px;
+                    padding-right: 20px;
+                }
+            }
+        }
+        &-action {
+            display: flex;
+            align-items: center;
+            justify-content: end;
+            @media #{$lg}{
+                justify-content: center;
+            }
+        }
+        &-user {
+            span {
+                display: flex;
+                align-items: center;
+                gap: 10px;
+
+                color: rgb(255, 255, 255);
+                font-size: 16px;
+                font-weight: 500;
+                line-height: 18px;
+            }
+        }
+        &-language {
+            position: relative;
+            z-index: 9;
+            padding-left: 20px;
+            margin-left: 20px;
+            &::after {
+                position: absolute;
+                left: 0;
+                top: 50%;
+                content: "";
+                transform: translateY(-50%);
+                width: 1px;
+                height: 18px;
+                background-color: rgba(255, 255, 255, 0.30);
+            }
+            &-option {
+                &.nice-select {
+                    border-radius: 8px;
+                    border: 0;
+                    width: 100%;
+                    padding: 0;
+                    background: transparent;
+                    z-index: 99;
+                    height: 22px;
+                    padding-right: 20px;
+                    display: flex;
+                    align-items: center;
+
+                    color: rgb(255, 255, 255);
+                    font-size: 16px;
+                    font-weight: 500;
+                    line-height: 18px;
+                    text-transform: capitalize;
+                    ul {
+                        background-color: #fff;
+                        width: 85px;
+                        z-index: 99;
+                        border-radius: 4px;
+                        border: none;
+                        margin-top: 7px;
+                        box-shadow: 0px 6px 50px 0px rgba(27, 42, 82, 0.2);
+                        li {
+                            color: #7F879E;
+                            font-size: 13px;
+                            font-weight: 500;
+                            width: 100%;
+                            padding: 0 15px;
+                            min-height: 30px;
+                            height: 30px;
+                            line-height: 30px;
+                        }
+                    }
+                    .option.selected {
+                        font-weight: 500;
+                    }
+                    &::after {
+                        display: none;
+                    }
+                    &::before {
+                        position: absolute;
+                        right: 0;
+                        top: 50%;
+                        transform: translateY(-50%);
+                        font-family: "Font Awesome 6 Pro";
+                        content: "\f107";
+                        margin-top: 1px;
+                    }
+                    &.open::before {
+                        content: "\f106";
+                    }
+                }
+            }
+        }
+    }
+    &-action {
+        display: flex;
+        align-items: center;
+        gap: 30px;
+        &-call {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            @media #{$xl}{
+                display: none;
+            }
+            &-icon {
+                width: 46px;
+                height: 46px;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                border-radius: 50%;
+                background-color: #fff;
+                box-shadow: 0px 8px 48px 0px rgba(0, 0, 0, 0.12);
+            }
+            &-info {
+                span {
+                    color: rgb(133, 133, 133);
+                    font-size: 13px;
+                    font-weight: 600;
+                    line-height: normal;
+                    display: block;
+                    margin-bottom: 1px;
+                }
+                a {
+                    color: rgb(11, 12, 15);
+                    font-size: 22px;
+                    font-weight: 600;
+                    line-height: normal;
+                    letter-spacing: -0.5px;
+                    display: block;
+                }
+               
+            }
+        }
+    }
+}

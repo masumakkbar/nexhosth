@@ -1,0 +1,115 @@
+/* ///////////////////////////////////////////////////////////
+02. price CSS
+/////////////////////////////////////////////////////////// */ 
+@use '../abstracts/variables' as *;
+
+
+
+/* ///////////////////////////////////////////////////////////
+Header CSS 01 Start
+/////////////////////////////////////////////////////////// */  
+
+
+.h5_nh_counter {
+    &-area {
+        margin-top: -110px;
+        position: relative;
+        z-index: 1;
+    }
+    &-wrap {
+        background: var(--clr-theme-primary);
+        border-radius: 16px;
+        padding: 50px 55px 55px;
+        display: grid;
+        grid-template-columns: 1fr 300px 300px 1fr;
+        @media #{$lg}{
+            grid-template-columns: 1fr 1fr 1fr 1fr;
+        }
+        @media #{$md}{
+            grid-template-columns: 1fr 1fr;
+            row-gap: 25px;
+        }
+        @media #{$sm}{
+            padding: 50px 20px 55px;
+        }
+        @media #{$xs}{
+            grid-template-columns: 1fr;
+            padding: 50px 20px 55px;
+        }
+    }
+    &-item {
+        position: relative;
+        z-index: 1;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        &::after {
+            position: absolute;
+            right: 0;
+            top: 50%;
+            transform: translateY(-50%);
+            content: "";
+            width: 1px;
+            height: 105px;
+            background: url('../../assets/images/bg/counter-line.png');
+            @media #{$xs}{
+                display: none;
+            }
+            
+        }
+        &:first-child {
+            align-items: start;
+            @media #{$md}{
+                align-items: center;
+            }
+        }
+        &:nth-child(2){
+            &::after {
+                @media #{$md}{
+                    display: none;
+                }
+            }
+        }
+        &:last-child {
+            align-items: end;
+            @media #{$md}{
+                align-items: center;
+            }
+            &::after {
+                display: none;
+            }
+        }
+        &-title {
+            color: rgb(255, 255, 255);
+            font-size: 72px;
+            font-weight: 600;
+            line-height: 1;
+            margin-bottom: 20px;
+            @media #{$lg}{
+                font-size: 60px;
+            }
+        }
+        &-subtitle {
+            color: rgb(255, 255, 255, 0.9);
+            font-size: 18px;
+            font-weight: 500;
+            line-height: normal;
+            letter-spacing: -0.2px;
+            display: block;
+            position: relative;
+            z-index: 1;
+            &::before {
+                position: absolute;
+                left: 50%;
+                top: 50%;
+                content: "";
+                transform: translate(-50%, -50%) rotate(180deg);
+                width: 61px;
+                height: 61px;
+                background: linear-gradient(180.00deg, rgb(252, 252, 252),rgba(252, 252, 252, 0) 100%);
+                opacity: 0.15;
+                border-radius: 50%;
+            }
+        }
+    }
+}

@@ -1,0 +1,144 @@
+/* ///////////////////////////////////////////////////////////
+02. video CSS
+/////////////////////////////////////////////////////////// */ 
+@use '../abstracts/variables' as *;
+
+
+
+/* ///////////////////////////////////////////////////////////
+Header CSS 01 Start
+/////////////////////////////////////////////////////////// */  
+
+.nh_reason {
+    &-item {
+        border-radius: 8px;
+        box-shadow: 0px 8px 40px 0px rgba(11, 12, 15, 0.08);
+        background: #fff;
+        padding: 30px 30px 23px;
+        @include transition (.3s);
+        &-icon {
+            width: 80px;
+            height: 80px;
+            border-radius: 50%;
+            background: rgb(229, 248, 240);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-left: auto;
+            margin-right: auto;
+            margin-bottom: 40px;
+            @include transition(.3s);
+            svg {
+                color: var(--clr-theme-primary);
+            }
+        }
+        &-content {
+            text-align: center;
+            &-title {
+                color: var(--clr-body-heading);
+                font-size: 24px;
+                font-weight: 700;
+                line-height: 1.4;
+                letter-spacing: -1px;
+                margin-bottom: 16px;
+                @include transition(.3s);
+                @media #{$xl}{
+                    font-size: 22px;
+                }
+            }
+            p {
+                @include transition(.3s);
+                color: rgb(133, 133, 133);
+                font-size: 16px;
+                font-weight: 400;
+                line-height: 26px;
+                margin-bottom: 0;
+            }
+        }
+        &:hover {
+            background-color: var(--clr-theme-primary);
+            .nh_reason-item {
+                &-icon {
+                    background-color: #fff;
+                }
+                &-content {
+                    &-title {
+                        color: #fff;
+                    }
+                    p {
+                        color: #fff;
+                    }
+                }
+            }
+        }
+    }
+}
+
+
+/* ///////////////////////////////////////////////////////////
+Header CSS 02 Start
+/////////////////////////////////////////////////////////// */  
+
+.h2_nh_reason {
+    &-item {
+        &-icon {
+            width: 85px;
+            height: 85px;
+            border-radius: 50%;
+            background: rgb(229, 248, 240);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-bottom: -50px;
+            margin-left: 25px;
+            position: relative;
+            z-index: 1;
+            @include transition(.3s);
+            border: 5px solid rgb(247, 249, 251);
+            svg {
+                @include transition(.3s);
+                color: var(--clr-theme-primary);
+            }
+        }
+        &-content {
+            border-radius: 8px;
+            box-shadow: 0px 8px 40px 0px rgba(11, 12, 15, 0.08);
+            background: #fff;
+            padding: 85px 25px 23px;
+            @include transition (.3s);
+            &-title {
+                color: var(--clr-body-heading);
+                font-size: 24px;
+                font-weight: 700;
+                line-height: 1.4;
+                letter-spacing: -0.8px;
+                margin-bottom: 16px;
+                @include transition(.3s);
+                @media #{$xl}{
+                    font-size: 22px;
+                }
+                &:hover a{
+                    color: var(--clr-theme-primary)
+                }
+            }
+            p {
+                @include transition(.3s);
+                color: rgb(133, 133, 133);
+                font-size: 16px;
+                font-weight: 400;
+                line-height: 26px;
+                margin-bottom: 0;
+            }
+        }
+        &:hover {
+            .h2_nh_reason-item {
+                &-icon {
+                    background-color: var(--clr-theme-primary);
+                    svg {
+                        color: #fff;
+                    }
+                }
+            }
+        }
+    }
+}
